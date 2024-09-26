@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discussion App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="left-pane" id="questionList">
+            <h2>Questions</h2>
+            <ul id="questions"></ul>
+        </div>
+
+        <div class="right-pane">
+            <div id="questionForm">
+                <h2>Ask a Question</h2><hr>
+                <form id="newQuestionForm">
+                    <label for="title">Title:</label>
+                    <input type="text" id="title" name="title" required><br>
+                    <label for="question">Question:</label>
+                    <textarea id="question" name="question" required></textarea><br>
+                    <button type="submit">Submit Question</button>
+                </form>
+            </div>
+
+            <div id="questionDetails" class="hidden">
+                <h2 id="questionTitle"></h2>
+                <p id="questionText"></p>
+                <br><hr><br>
+                <h3>Responses</h3>
+                <div id="responses"></div>
+                <form id="responseForm">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required><br>
+                    <label for="comment">Comment:</label>
+                    <textarea id="comment" name="comment" required></textarea><br>
+                    <button type="submit">Submit Response</button>
+                </form>
+
+                <button id="resolveBtn">Resolve</button><br><br><hr>
+                <button id="backToFormBtn" class="hidden">Ask Another </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
